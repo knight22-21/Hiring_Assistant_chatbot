@@ -5,7 +5,6 @@ import hashlib
 
 st.set_page_config(page_title="TalentScout Hiring Assistant")
 
-# Get Hugging Face API key from Streamlit secrets
 hf_api_key = st.secrets["huggingface_api_key"]
 
 # Set up Hugging Face API
@@ -114,7 +113,7 @@ def generate_question(tech_stack, cnt):
 
 
 def main():
-    # Set page title
+    
 
     st.title("🤖 TalentScout Hiring Assistant")
     st.write(
@@ -122,7 +121,7 @@ def main():
 
     # Initialize session state if not already initialized
     if "exit" not in st.session_state:
-        st.session_state["exit"] = False  # Initialize 'exit' state variable
+        st.session_state["exit"] = False  
     if "conversation" not in st.session_state:
         st.session_state["conversation"] = []
     if "questions" not in st.session_state:
